@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    {% for x in Note %}
+        <div class="container-fluid" style="background-color: white;">
+            <h4>{{x.Title}}</h4>
+            {{x.Detail}}
+            {{x.Date}}
+        </div>
+    {% endfor %}
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-color: slategrey;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="text-decoration: none;">ToDoList</a>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="container-fluid" style="background-color: rgb(211,211,211); width: 350px; border-radius: 50px; width: auto; height: 500px;">
+                <center>
+                    <h1>ToDoList</h1>
+                </center>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <center>
+                <div class="container-fluid" style="background-color: rgb(211,211,211); width: 350px; border-radius: 50px;">
+                    <h4 style="text-align: center;">TODO LIST</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="title" style="width: 300px;">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="detail" style="width: 300px;height: 100px; ;margin-top: 10px;">
+                    </div>
+                    <label for="datetime" style="margin-top: 13px;">Date:</label>
+                    <input type="datetime-local" id="datetime" name="datetime"> <br>
+                    <button type="button" class="btn btn-secondary" style="margin-top: 13px; margin-bottom: 13px;">Save</button>                  
+                </div>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
